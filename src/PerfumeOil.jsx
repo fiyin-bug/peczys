@@ -1,5 +1,5 @@
-import react from 'react';
-import Navbar from './navbar';
+
+import Navbar from './Navbar';
 import OilCard from './OilCard';
 import oil1 from './assets/oil1.jpg';
 import oil2 from './assets/oil2.jpg';

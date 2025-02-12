@@ -5,7 +5,7 @@ import richh from './assets/richh.jpg';
 import bloss from './assets/bloss.jpg';
 import femme from './assets/femme.jpg';
 import masc2 from './assets/masc2.jpg';
-import Navbar from './navbar';
+import Navbar from './Navbar';
 const perfumesData = [
   { id: 1, name: "Masculine Mystery", gender: "Male", image:masc,price:20000},
   { id: 2, name: "Rich Tobacco Blend", gender: "Male", image: richh, price: 25000},
