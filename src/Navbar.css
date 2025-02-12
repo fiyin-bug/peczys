@@ -1,0 +1,157 @@
+/* Navbar Container */
+.navbar-container {
+  width: 100%;
+  background-color: white;
+}
+  
+
+/* Top Navbar */
+.top-navbar {
+  display: flex;
+  justify-content: space-between; /* Space between logo and search bar */
+  align-items: center; /* Vertically center items */
+  background-color: white;
+  padding: 10px 20px; /* Adjust padding as needed */
+  
+}
+
+/* Logo */
+.logo img {
+  width: 190px;
+  height: 180px; /* Adjust as needed */
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Spacing between elements */
+  margin-left: 8px;
+}
+
+/* Categories Dropdown */
+.categories-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.categories-dropdown span {
+  padding: 8px 12px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+.categories-dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.categories-dropdown-content li {
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.categories-dropdown-content li:hover {
+  background-color: #f8f8f8;
+}
+
+.search-bar input {
+  padding: 8px;
+  border: 3px solid black;
+  border-radius: 4px;
+  height: 30px;
+  width: 700px; /* Adjust width as needed */
+}
+
+.search-bar button {
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #555;
+}
+
+/* Bottom Navbar: Navigation Links */
+.navbar {
+  display: flex;
+  justify-content: center; /* Center the nav-links */
+  background-color: white;
+  padding: 10px 0; /* Adjust padding to 0 horizontally to keep it full width */
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-left: 60px;
+  padding: 0;
+}
+
+.nav-links li {
+  font-size: 18px;
+  position: relative;
+  margin-right: 40px; /* Adjust spacing between list items */
+}
+
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.nav-links li:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown-content li a {
+  padding: 10px;
+  display: block;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus .dropdown-content,
+.dropdown:active .dropdown-content {
+  display: block; /* This should show the dropdown, but it's not necessary with React state */
+}
+
+.shopping-bag-icon {
+  font-size: 24px;
+  color: black;
+  margin-right: 20px !important;
+  
+}

@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the page takes at least the full height of the viewport */
+  margin: 0;
+}
+
+
+
+
+
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    width: 1400px;
+    top: 1720px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  .footer-logo img {
+    height: 60px; /* Adjust based on your logo */
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .instagram-icon {
+    font-size: 24px;
+    color: white;
+    transition: 0.3s;
+  }
+  
+  .instagram-icon:hover {
+    color: #e1306c; /* Instagram color */
+  }
+  
