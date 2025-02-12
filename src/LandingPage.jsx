@@ -12,7 +12,7 @@ import bloss from './assets/bloss.jpg';
 import femme from './assets/femme.jpg';
 import masc2 from './assets/masc2.jpg';
 
-import Navbar from './navbar';
+import Navbar from './Navbar';
 import PerfumeCard from './PerfumeCard';
 
 // Define perfumesData or import from another file
