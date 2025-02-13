@@ -1,26 +1,29 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LandingPage from "./LandingPage"; // Assuming Landing.jsx or Landing.js is directly in src
+import LandingPage from "./LandingPage"; 
 import Perfumes from "./Perfumes";
-import "./Perfume.css";
 import PerfumeOil from "./PerfumeOil";
-import Footer from './Footer';
-import './Footer.css';
+import Footer from "./Footer";
+import { SearchProvider } from "./SearchContext"; // Import the context
+import "./Perfume.css";
+import "./Footer.css";
+import "./App.css"; // or "./App.css" depending on your setup
 
 function App() {
   return (
-    <Router>
-      <div className="main-content">
-        <Footer/>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/perfumes" element={<Perfumes />} />
-          <Route path="/oils" element={<PerfumeOil />} />
-
-          {/* Add other routes here */}
-        </Routes>
-      </div>
-    </Router>
+    <SearchProvider> {/* ✅ Wrap the whole app */}
+      <Router>
+        <div className="main-content">
+          <Footer />
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/perfumes" element={<Perfumes />} />
+            <Route path="/oils" element={<PerfumeOil />} />
+            {/* Add other routes here */}
+          </Routes>
+        </div>
+      </Router>
+    </SearchProvider>
   );
 }
 

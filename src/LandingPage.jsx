@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import one from './assets/one.png';
 import two from './assets/two.jpeg';
 import three from './assets/three.jpeg';
-import four from './assets/four.png';
-import five from './assets/five.png';
+import four from './assets/four.jpg';
+import five from './assets/five.jpg';
 import six from './assets/six.png';
 import './LandingPage.css';
 import masc from './assets/masc.jpg';
@@ -11,10 +11,12 @@ import richh from './assets/richh.jpg';
 import bloss from './assets/bloss.jpg';
 import femme from './assets/femme.jpg';
 import masc2 from './assets/masc2.jpg';
-
+import Mens from './Mens';
 import Navbar from './Navbar';
+import Perfumes from './Perfumes';
 import PerfumeCard from './PerfumeCard';
-
+import Womens from './Womens';
+import Carousel from './Carousel';
 // Define perfumesData or import from another file
 const perfumesData = [
  { id: 1, name: "Masculine Mystery", gender: "Male", image:masc,price:20000},
@@ -25,65 +27,16 @@ const perfumesData = [
 ];
 
 const LandingPage = () => {
-  // Array of imported images
-  const images = [one, two, three, four, five, six];
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  // Cycle through slides automatically
-  useEffect(() => {
-    const slideInterval = setInterval(() => {
-      setCurrentSlide(prevSlide => (prevSlide + 1) % images.length);
-    }, 3000); // Change slide every 3 seconds
-
-    return () => clearInterval(slideInterval); // Clean up on unmount
-  }, [images.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
-  };
+  
 
   return (
     <>
       <Navbar />
-      <div className="carousel-container">
-        <div className="carousel-wrapper">
-          {images.map((image, index) => (
-            <div 
-              key={index}
-              className={`carousel-slide ${currentSlide === index ? 'active' : ''}`}
-              style={{ 
-                backgroundImage: `url(${image})`,
-                transform: `translateX(-${currentSlide * 100}%)`
-              }}
-            ></div>
-          ))}
-        </div>
-        <button onClick={prevSlide} className="carousel-btn prev">Previous</button>
-        <button onClick={nextSlide} className="carousel-btn next">Next</button>
-      </div>
-
-      <div className="new">
-        <h4 className="newt">NEW ARRIVALS</h4>
-      </div>
+      <Carousel />
+     <Mens/>
+     <Womens/>
+     
       
-      <div className="landing-container">
-        
-        <div className="perfume-grid">
-          {perfumesData.slice(0, 3).map((perfume) => (  
-            <PerfumeCard
-              key={perfume.id}
-              name={perfume.name}
-              gender={perfume.gender}
-              image={perfume.image}
-              price={perfume.price}
-            />
-          ))}
-        </div>
-      </div>
     </>
   );
 };

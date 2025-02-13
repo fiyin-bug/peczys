@@ -15,6 +15,7 @@ const PerfumeOil = () => {
     return (
       <>
         <Navbar/>
+        <h4 className="sho">SHOP OUR COLLECTION</h4>
         <div className="perfumes-container">
           {perfumesData.map(perfume => (
             <OilCard

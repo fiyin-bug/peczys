@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 import pecz from "./assets/pecz.jpg"; // Replace with your actual logo
 import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    alert(`Thank you for subscribing, ${email}!`);
+    setEmail(""); // Clears input field after submission
+    // Here you can integrate Firebase, Mailchimp, or a backend API to store emails
+  };
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -23,6 +32,22 @@ const Footer = () => {
             <FaInstagram className="instagram-icon" />
           </a>
         </div>
+      </div>
+
+      {/* Mailing List Section */}
+      <div className="newsletter">
+        <h3>Join Our Mailing List</h3>
+        <p>Get exclusive offers and updates.</p>
+        <form onSubmit={handleSubscribe} className="newsletter-form">
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required 
+          />
+          <button type="submit">Subscribe</button>
+        </form>
       </div>
     </footer>
   );

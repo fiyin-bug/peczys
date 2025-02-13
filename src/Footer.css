@@ -1,54 +1,125 @@
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ensures the page takes at least the full height of the viewport */
-  margin: 0;
-}
+/* General Footer Styles */
 .footer {
-    background-color: black;
-    color: white;
-    padding: 20px 0;
-    position: relative;
-    width: 1400px;
-    top: 1720px;
-  }
-  
+  background-color: black;
+  color: white;
+  padding: 30px 0;
+  width: 100%;
+  position: relative; /* Keeps it at the bottom naturally */
+  bottom: 0;
+  top: 2620px;
+  text-align: center;
+}
+
+/* Footer Content Layout */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+/* Logo Styling */
+.footer-logo img {
+  height: 60px; /* Adjust based on your logo */
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Instagram Icon */
+.instagram-icon {
+  font-size: 24px;
+  color: white;
+  transition: 0.3s;
+}
+
+.instagram-icon:hover {
+  color: #e1306c; /* Instagram brand color */
+}
+
+/* Newsletter Section */
+.newsletter {
+  margin-top: 20px;
+}
+
+.newsletter h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.newsletter p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.newsletter-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  width: 250px;
+}
+
+.newsletter-form button {
+  background-color: #e1306c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: #c1275a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
+    flex-direction: column;
+    text-align: center;
   }
-  
-  .footer-logo img {
-    height: 60px; /* Adjust based on your logo */
-  }
-  
+
   .footer-links {
-    display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
   }
-  
-  .footer-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s;
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 5px;
   }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
+
+  .newsletter-form input {
+    width: 100%;
   }
-  
-  .instagram-icon {
-    font-size: 24px;
-    color: white;
-    transition: 0.3s;
-  }
-  
-  .instagram-icon:hover {
-    color: #e1306c; /* Instagram color */
-  }
-  
+}

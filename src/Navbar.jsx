@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import pecz from "./assets/pecz.jpg";
 import "./Navbar.css";
 import { FaShoppingBag } from "react-icons/fa";
+import { useSearch } from "./SearchContext"; // ✅ Correct path
+import { IoMdArrowDropdown } from "react-icons/io";
+
+
 
 
 const Navbar = () => {
@@ -17,6 +21,7 @@ const Navbar = () => {
   const toggleCategoryDropdown = () => {
     setIsCategoryDropdownOpen(!isCategoryDropdownOpen);
   };
+  const { setSearchTerm } = useSearch();
 
   return (
     <>
@@ -28,7 +33,7 @@ const Navbar = () => {
           </div>
           <div className="search-bar">
             <div className="categories-dropdown" onClick={toggleCategoryDropdown}>
-              <span className="span">All Categories ▼</span>
+              <span className="span">All Categories <IoMdArrowDropdown /></span>
               {isCategoryDropdownOpen && (
                 <ul className="categories-dropdown-content">
                   <li>Colognes</li>
@@ -37,8 +42,14 @@ const Navbar = () => {
                 </ul>
               )}
             </div>
-            <input type="text" placeholder="Search..." />
-            <button>Search</button>
+            <input type="text" placeholder="Search Perfumes....." onChange={(e) =>{
+             console.log(  "Search term:",e.target.value);
+             setSearchTerm(e.target.value.toLowerCase())
+            }}
+            />
+            <button  style={{
+    backgroundColor: 'black',transition: 'background-color 0.3s ease'}}
+    >Search</button>
           </div>
           <FaShoppingBag className="shopping-bag-icon" />
         </div>
@@ -48,7 +59,7 @@ const Navbar = () => {
           <ul className="nav-links">
             <li><Link to="/">Home</Link></li>
             <li className="dropdown">
-              <a href="#" onClick={togglePerfumeDropdown}>Perfumes ▼</a>
+              <a href="#" onClick={togglePerfumeDropdown}>Perfumes <IoMdArrowDropdown /></a>
               {isPerfumeDropdownOpen && (
                 <ul className="dropdown-content">
                   <li><Link to="/perfumes">Perfumes</Link></li>

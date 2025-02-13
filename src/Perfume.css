@@ -1,7 +1,7 @@
 .perfumes-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
+   gap: 14px;
     padding: 20px;
     margin-top: 100px;
     justify-content: center;
@@ -49,10 +49,43 @@
   .perfume-price {
     font-size: 1.3em;
     font-weight: bold;
-    color: #e44d26;
+    color: black;
     background: #ffebe6;
     padding: 5px 10px;
     border-radius: 6px;
+    margin-top: -5px;
     display: inline-block;
   }
+  .perfume-add {
+    background-color: black; /* Blue background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    padding: 5px 10px; /* Add padding */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    width: 100%; /* Full width of the card */
+    margin-top: 5px; /* Space above the button */
+  }
   
+  .perfume-add:hover {
+    background-color: #192b3d; /* Darker blue on hover */
+  }
+  
+  .perfume-add:active {
+    background-color: #2e5379; /* Even darker blue on click */
+  }
+
+  .sho{
+    margin-left: 570px;
+    color: black;
+    margin-top: 90px;
+    font-size: 35px;
+    border-bottom: 1px solid rgb(73, 69, 69); /* Adjust color and thickness as needed */
+    display: inline-block; /* Ensures the border only spans the text */
+   
+  }
+  .perfume-ml{
+    font-size: 15px;
+  }

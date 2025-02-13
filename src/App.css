@@ -1,1 +1,19 @@
 
+/* Apply a default font to the whole app */
+body {
+    font-family: "Poppins", sans-serif; /* Change to preferred font */
+  }
+  
+  /* If you want to use other fonts selectively */
+  .cursive-text {
+    font-family: "Caveat", cursive;
+  }
+  
+  .bold-text {
+    font-family: "Chewy", sans-serif;
+  }
+  
+  .elegant-text {
+    font-family: "Quintessential", cursive;
+  }
+  

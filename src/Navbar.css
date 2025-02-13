@@ -8,6 +8,7 @@
 /* Top Navbar */
 .top-navbar {
   display: flex;
+  margin-top: -95px;
   justify-content: space-between; /* Space between logo and search bar */
   align-items: center; /* Vertically center items */
   background-color: white;
@@ -62,6 +63,10 @@
 .categories-dropdown-content li:hover {
   background-color: #f8f8f8;
 }
+.span{
+  color: rgb(23, 21, 21);
+  
+}
 
 .search-bar input {
   padding: 8px;
@@ -101,7 +106,7 @@
 }
 
 .nav-links li {
-  font-size: 18px;
+  font-size: 20px;
   position: relative;
   margin-right: 40px; /* Adjust spacing between list items */
 }
