@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import './Perfume.css'
 
 const PerfumeCard = ({ id, name, gender, image, price,ml }) => {
   const navigate = useNavigate();

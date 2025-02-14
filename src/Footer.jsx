@@ -28,7 +28,7 @@ const Footer = () => {
           <Link to="/perfumes">Perfumes</Link>
           <Link to="/perfumeoil">Perfume Oils</Link>
           <Link to="/contact">Contact Us</Link>
-          <a href="https://instagram.com/yourpage" target="_blank" rel="noopener noreferrer">
+          <a href="https://instagram.com/peczys.c" target="_blank" rel="noopener noreferrer">
             <FaInstagram className="instagram-icon" />
           </a>
         </div>
@@ -37,7 +37,8 @@ const Footer = () => {
       {/* Mailing List Section */}
       <div className="newsletter">
         <h3>Join Our Mailing List</h3>
-        <p>Get exclusive offers and updates.</p>
+       
+       
         <form onSubmit={handleSubscribe} className="newsletter-form">
           <input 
             type="email" 
@@ -46,7 +47,7 @@ const Footer = () => {
             onChange={(e) => setEmail(e.target.value)}
             required 
           />
-          <button type="submit">Subscribe</button>
+          <button className="subt" type="submit">Subscribe</button>
         </form>
       </div>
     </footer>

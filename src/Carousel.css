@@ -1,82 +1,46 @@
-/* Carousel Container */
-.carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    overflow: hidden;
-    margin: auto;
-}
 
-/* Black overlay */
-.overlay {
+/* Overlay Container */
+.overlay-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     background: black;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 50px 20px;
+    height: 290px;
+    overflow-y: auto;
     z-index: 9999; /* Ensure it's fully on top */
 }
 
 /* Magic typing text */
 .magic-text {
     color: white;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
     font-family: 'Courier New', monospace;
-    white-space: nowrap;
+    white-space: pre-line;
     overflow: hidden;
-    border-right: 2px solid white; /* Typing cursor */
     display: inline-block;
-    animation: blinkCursor 0.8s infinite;
 }
 
-/* Cursor blinking effect */
+
 @keyframes blinkCursor {
     50% { border-color: transparent; }
 }
 
-/* Typing effect animation */
-@keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; visibility: hidden; }
+
+/* Adjust font sizes for different screen sizes */
+@media (max-width: 768px) {
+    .magic-text {
+        font-size: 0.7rem;
+    }
 }
 
-/* Carousel Wrapper */
-.carousel-wrapper {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-/* Individual Slide */
-.carousel-slide {
-    min-width: 100%;
-    height: 530px;
-    background-size: cover;
-    background-position: center;
-}
-
-/* Buttons */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    z-index: 5;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
+@media (max-width: 480px) {
+    .magic-text {
+        font-size: 1.2rem;
+    }
 }

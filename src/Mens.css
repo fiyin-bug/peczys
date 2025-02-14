@@ -1,10 +1,5 @@
 /* App.css */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    
-  }
+
   
   .section-container {
     display: flex;
@@ -77,4 +72,71 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+  /* ✅ Mobile Screens (Phones: 0px - 480px) */
+@media screen and (max-width: 480px) {
+    .section-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 15px;
+    }
   
+    .left-section {
+      padding-right: 0;
+      margin-top: -90px;
+    }
+  
+    .left-section h2 {
+      font-size: 28px;
+      margin-top: 22px;
+    }
+  
+    .left-section h3 {
+      font-size: 20px;
+      margin-top: 60px;
+    }
+  
+    .left-section p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  
+    .left-section button {
+      width: 100%;
+      padding: 12px;
+      margin-top:120px ;
+    }
+  
+    .right-section img {
+      max-width: 100%;
+      margin-left: -36px;
+    }
+  }
+  
+  /* ✅ Tablet Screens (iPads: 481px - 1024px) */
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    .section-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .left-section {
+      padding-right: 0;
+    }
+  
+    .left-section h2 {
+      font-size: 32px;
+    }
+  
+    .left-section h3 {
+      font-size: 22px;
+    }
+  
+    .left-section p {
+      font-size: 15px;
+    }
+  
+    .right-section img {
+      max-width: 50%;
+    }
+  }

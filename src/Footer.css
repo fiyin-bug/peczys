@@ -41,7 +41,7 @@
 }
 
 .footer-links a:hover {
-  text-decoration: underline;
+  color: rgb(141, 125, 125);
 }
 
 /* Instagram Icon */
@@ -100,7 +100,6 @@
 .newsletter-form button:hover {
   background-color: #c1275a;
 }
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer-content {
@@ -111,15 +110,51 @@
   .footer-links {
     flex-direction: column;
     gap: 10px;
-    margin-top: 10px;
   }
 
   .newsletter-form {
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
   }
 
   .newsletter-form input {
     width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    height: 320px;
+  padding: 1px;
+  }
+
+  .footer-logo img {
+    margin-top: 10px;
+    height: 30px;
+  }
+
+  .footer-links{
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  .subt{
+    margin-top: 9px;;
+  }
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  .newsletter h3 {
+    font-size: 16px;
+    margin-top: -16px;
+  }
+
+  .newsletter p {
+    font-size: 9px;
+    margin-top: -12px;
+  }
+  .newsletter-form input {
+    margin-top: -1px;;
   }
 }

@@ -15,6 +15,7 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    height: 419px;
     padding-bottom: 15px;
   }
   
@@ -60,13 +61,13 @@
     background-color: black; /* Blue background */
     color: white; /* White text */
     border: none; /* Remove default border */
-    padding: 5px 10px; /* Add padding */
+    padding: 15px 17px; /* Add padding */
     font-size: 16px; /* Font size */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s ease; /* Smooth hover effect */
     width: 100%; /* Full width of the card */
-    margin-top: 5px; /* Space above the button */
+    margin-top: -95px /* Space above the button */
   }
   
   .perfume-add:hover {
@@ -78,14 +79,90 @@
   }
 
   .sho{
-    margin-left: 570px;
+    position: relative;
+   left: 120px;
     color: black;
-    margin-top: 90px;
+   top: 130px;
     font-size: 35px;
-    border-bottom: 1px solid rgb(73, 69, 69); /* Adjust color and thickness as needed */
+    
     display: inline-block; /* Ensures the border only spans the text */
    
   }
   .perfume-ml{
     font-size: 15px;
   }
+  /* Media Queries for Responsive Design */
+
+/* Tablet View (e.g., screens between 600px and 1024px) */
+@media (max-width: 1024px) {
+  .perfume-card {
+    width: 200px; 
+    height: 360px;
+
+    .perfume-image {
+      height: 200px; /* Adjust image height */
+    }
+  }
+
+  .perfume-name {
+    font-size: 1.1em; /* Slightly smaller font size */
+  }
+
+  .perfume-price {
+    font-size: 1.1em; /* Slightly smaller font size */
+  }
+
+  .perfume-add {
+    font-size: 14px; /* Smaller button text */
+  }
+
+  .sho {
+    position: relative;
+  left: -72px;
+    transform: translateX(-50%);
+    font-size: 50px; /* Smaller font size */
+  }
+ 
+}
+
+/* Mobile View (e.g., screens less than 600px) */
+@media (max-width: 600px) {
+  .perfume-card {
+    width: 260px;
+     height: 350px;
+     margin-left: 40px;
+  }
+
+  .perfume-image {
+    height: 150px; /* Adjust image height */
+  }
+
+  .perfume-name {
+    font-size: 1em; /* Smaller font size */
+  }
+
+  .perfume-gender {
+    font-size: 0.8em; /* Smaller font size */
+  }
+
+  .perfume-price {
+    font-size: 1em; /* Smaller font size */
+    padding: 3px 8px; /* Smaller padding */
+  }
+
+  .perfume-add {
+    font-size: 17px; /* Smaller button text */
+    padding: 7px 8px;
+    margin-top: -8px;
+  }
+  .perfume-add:nth-child(1),
+  .perfume-add:nth-child(3),.perfume-add:nth-child(4) {
+    margin-top: 20px;
+  }
+  .sho {
+  left: -240px; /* Center the heading */
+    transform: translateX(-50%);
+    font-size: 45px; /* Smaller font size */
+    margin-top: 50px; /* Adjust top margin */
+  }
+}

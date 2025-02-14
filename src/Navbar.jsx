@@ -33,23 +33,27 @@ const Navbar = () => {
           </div>
           <div className="search-bar">
             <div className="categories-dropdown" onClick={toggleCategoryDropdown}>
-              <span className="span">All Categories <IoMdArrowDropdown /></span>
+              <span className="span" style={{
+        backgroundColor: 'black',color:'white'}}>Categories  </span>
               {isCategoryDropdownOpen && (
                 <ul className="categories-dropdown-content">
-                  <li>Colognes</li>
-                  <li>Fragrances</li>
-                  <li>Gifting</li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/perfumes">Perfumes</Link></li>
+            <li><Link to="/diffusers">Diffusers</Link></li>
+            <li><Link to="/oils">Perfume Oils</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
                 </ul>
               )}
             </div>
-            <input type="text" placeholder="Search Perfumes....." onChange={(e) =>{
+            <input type="text" placeholder="Search....." onChange={(e) =>{
              console.log(  "Search term:",e.target.value);
              setSearchTerm(e.target.value.toLowerCase())
             }}
             />
-            <button  style={{
-    backgroundColor: 'black',transition: 'background-color 0.3s ease'}}
-    >Search</button>
+    <button className="blop" style={{
+        backgroundColor: 'black', transition: 'background-color 0.3s ease', padding: '4px 10px',fontSize: '16px'}}
+        >Search</button>
           </div>
           <FaShoppingBag className="shopping-bag-icon" />
         </div>

@@ -15,10 +15,12 @@ const PerfumeOil = () => {
     return (
       <>
         <Navbar/>
-        <h4 className="sho">SHOP OUR COLLECTION</h4>
+        <h4 className="oils">PERFUME OILS</h4>
         <div className="perfumes-container">
           {perfumesData.map(perfume => (
             <OilCard
+         
+    
               key={perfume.id} 
               id={perfume.id} 
               name={perfume.name} 

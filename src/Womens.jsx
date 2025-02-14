@@ -37,9 +37,7 @@ const App = () => {
         <p>
           Embrace the essence of femininity with our exclusive Women's Collection.
           Our fragrances are crafted to embody grace, elegance, and timeless beauty.
-          From the delicate charm of "Blossom Allure" to the captivating intensity of "Femme Fatale,"
-          each scent is a masterpiece designed to leave a lasting impression. Elevate your presence with
-          Pecys Cologne, where every bottle tells a story of sophistication and allure.
+          From the delicate charm of "Blossom Allure" to the captivating intensity of "Femme Fatale".
         </p>
       </div>
     </div>

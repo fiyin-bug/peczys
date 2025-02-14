@@ -5,6 +5,9 @@
     padding: 12px; /* Optional: Add padding to the container */
   ;
   }
+  .sho{
+    margin-left: 455px;
+  }
   
   .oil-card {
     width: 230px;
@@ -16,7 +19,11 @@
     text-align: center;
     margin-left: 29px;
     padding-bottom: 15px;
-    height: 430px;
+    height: 406px;
+  }
+  .oils{
+    font-size: 30px;
+    margin-left:530px;
   }
   
   .oil-card:hover {
@@ -35,3 +42,45 @@
     width: 100%; /* Full width of the card */
     margin-top: 15px; /* Space above the button */
   }
+  /* Responsive Design */
+@media screen and (max-width: 768px) {
+  .oil-card {
+    width: 80%; /* Adjust width for tablets */
+    height: 120px;
+    padding-bottom: 10px;
+  }
+
+  .oil-add {
+    font-size: 14px;
+    padding: 8px;
+    margin-top: 25px;
+  }
+  .h4 oils{
+    font-size: 507px;
+    margin-top: 90px;
+    display: flex;
+    left: -1750px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .oil-card {
+    width: 260px; /* Full width for mobile */
+    height: 277px;
+    margin-left: 45px;
+    padding-bottom: 10px;
+  }
+
+  .oil-add {
+    margin-top: -25px;
+    font-size: 14px;
+    padding: 12px;
+  } 
+.oils{
+  left: -410px;
+  position: relative;
+   display:inline-block;
+   white-space: nowrap;
+   font-size: 25px;
+  }
+}

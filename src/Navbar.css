@@ -8,7 +8,7 @@
 /* Top Navbar */
 .top-navbar {
   display: flex;
-  margin-top: -95px;
+  margin-top: 140px;
   justify-content: space-between; /* Space between logo and search bar */
   align-items: center; /* Vertically center items */
   background-color: white;
@@ -21,6 +21,7 @@
   width: 190px;
   height: 180px; /* Adjust as needed */
 }
+
 
 /* Search Bar */
 .search-bar {
@@ -38,7 +39,7 @@
 
 .categories-dropdown span {
   padding: 8px 12px;
-  background-color: #eee;
+  background-color: #736e6e;
   border-radius: 4px;
 }
 
@@ -46,7 +47,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
+  background-color: #101010;
   border: 1px solid #ddd;
   list-style: none;
   padding: 10px;
@@ -54,17 +55,25 @@
   min-width: 150px;
   z-index: 1000;
 }
+.categories-dropdown-content li a {
+ 
+  text-decoration: none!important;
+  color: white;
+  cursor: pointer;
+}
 
 .categories-dropdown-content li {
+
   padding: 8px 0;
   cursor: pointer;
 }
 
-.categories-dropdown-content li:hover {
-  background-color: #f8f8f8;
+.categories-dropdown-content li a:hover {
+  color: #8a7d7d;
 }
-.span{
-  color: rgb(23, 21, 21);
+.span span{
+  color: white;
+  padding: 5px 10px;
   
 }
 
@@ -114,14 +123,14 @@
 .nav-links li a {
   color: black;
   text-decoration: none;
-  padding: 10px 15px;
+  /* padding: 10px 15px; */
   display: block;
   transition: background 0.3s ease;
 }
 
 .nav-links li a:hover {
-  background-color: #555;
-  color: white;
+  color: #7c7676;
+  
 }
 
 .nav-links li:last-child {
@@ -159,4 +168,91 @@
   color: black;
   margin-right: 20px !important;
   
+}
+/* ✅ Hide the bottom navbar on small mobile screens (phones) */
+@media screen and (max-width: 480px) {
+  .navbar {
+    display: none;
+  }
+
+  .top-navbar {
+    margin-top: -5px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-bar {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-bar input {
+    width: 20%; /* Make the search input take up more space */
+    padding: 3px 20px;
+  }
+
+  .logo img {
+    width: 200px;
+    height: 160px;
+  }
+  .span{
+    margin-left: -40px;
+   
+  }
+  .shopping-bag-icon{
+    margin-left:378px;
+    margin-top: -34px;
+  }
+
+}
+
+/* ✅ Responsive adjustments for tablets (iPads) */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .top-navbar {
+ margin-top: -20px;
+    flex-wrap: wrap;
+  }
+
+  .logo img {
+    width: 160px;
+    height: 150px;
+  }
+  .categories-dropdown span{
+    padding: 5px 35px;
+    font-size: 24px;
+  }
+ 
+
+  .search-bar {
+    width: 60%;
+    gap: 10px;
+  }
+
+  .search-bar input {
+    width: 100%;
+    height: 35px;
+  }
+
+  .search-bar button {
+    padding: 8px 12px;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .nav-links li {
+    font-size: 18px;
+    margin-right: 20px;
+  }
+
+  .shopping-bag-icon {
+    font-size: 22px;
+  }
 }
