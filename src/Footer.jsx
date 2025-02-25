@@ -26,7 +26,7 @@ const Footer = () => {
         <div className="footer-links">
           <Link to="/">Home</Link>
           <Link to="/perfumes">Perfumes</Link>
-          <Link to="/perfumeoil">Perfume Oils</Link>
+          <Link to="/oils">Perfume Oils</Link>
           <Link to="/contact">Contact Us</Link>
           <a href="https://instagram.com/peczys.c" target="_blank" rel="noopener noreferrer">
             <FaInstagram className="instagram-icon" />

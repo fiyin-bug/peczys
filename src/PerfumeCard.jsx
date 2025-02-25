@@ -13,7 +13,7 @@ const PerfumeCard = ({ id, name, gender, image, price,ml }) => {
   // Function to handle "Add to Cart" button click (open WhatsApp)
   const handleAddToCartClick = (e) => {
     e.stopPropagation(); // Prevent the card click event from firing
-    const phoneNumber = '+2348164504707'; // Replace with your WhatsApp business number
+    const phoneNumber = '+2347013084388'; // Replace with your WhatsApp business number
     const message = `I want to buy ${name}`; // Custom message with the product name
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

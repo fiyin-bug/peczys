@@ -1,5 +1,5 @@
-*{
- top: -280px;
+.dew{
+ margin-top: -340px;
 }
 
 
@@ -128,7 +128,7 @@
 
   .sho {
     position: relative;
-  left: -72px;
+  left: -40px;
     transform: translateX(-50%);
     font-size: 50px; /* Smaller font size */
   }

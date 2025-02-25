@@ -1,40 +1,41 @@
 /* Navbar Container */
+/* src/styles/Navbar.css */
 .navbar-container {
   width: 100%;
   background-color: white;
 }
-  
 
 /* Top Navbar */
 .top-navbar {
   display: flex;
- top: 140px;
- position: relative;
-  justify-content: space-between; /* Space between logo and search bar */
-  align-items: center; /* Vertically center items */
+  top: 149px;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
   background-color: white;
-  padding: 10px 20px; /* Adjust padding as needed */
-  
+  padding: 10px 20px;
 }
 
 /* Logo */
 .logo img {
   width: 190px;
-  height: 180px; /* Adjust as needed */
+  height: 180px;
 }
-
 
 /* Search Bar */
 .search-bar {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 15px; /* Spacing between elements */
-  margin-left: 8px;
+  gap: 15px;
+  top: 10px;
+  left: -200px;
 }
 
 /* Categories Dropdown */
 .categories-dropdown {
   position: relative;
+  top: 0px;
   cursor: pointer;
 }
 
@@ -45,27 +46,26 @@
 }
 
 .categories-dropdown-content {
+  display: none; /* Hidden by default */
   position: absolute;
-  top: 150%;
+  top: 100%; /* Adjusted from 150% to avoid gap */
   left: 0;
   background-color: #101010;
   border: 1px solid #ddd;
   list-style: none;
   padding: 10px;
   margin: 0;
-  display: none;
   min-width: 150px;
   z-index: 1000;
 }
+
 .categories-dropdown-content li a {
-  display: block;
-  text-decoration: none!important;
+  text-decoration: none;
   color: white;
   cursor: pointer;
 }
 
 .categories-dropdown-content li {
-  display: block;
   padding: 8px 0;
   cursor: pointer;
 }
@@ -74,18 +74,101 @@
   color: #8a7d7d;
   display: block;
 }
-.span span{
-  color: white;
-  padding: 5px 10px;
-  
+
+/* Show Categories Dropdown on Hover or Click */
+.categories-dropdown:hover .categories-dropdown-content,
+.categories-dropdown.open .categories-dropdown-content {
+  display: block;
 }
 
+/* Bottom Navbar: Navigation Links */
+.navbar {
+  display: flex;
+  position: relative;
+  top: 110px;
+  justify-content: center;
+  background-color: white;
+  padding: 10px 0;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-left: 60px;
+  padding: 0;
+}
+
+.nav-links li {
+  font-size: 20px;
+  margin-right: 40px;
+}
+
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #7c7676;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+/* Dropdown Menu */
+/* .dropdown {
+  position: relative;
+} */
+
+/* .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+} */
+
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%;
+  left: 390px; /* Adjusted from 380px to avoid gap */
+  background-color: #444;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown-content li a {
+  padding: 10px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+  background-color: #555;
+}
+
+/* Show Perfumes Dropdown on Hover or Click */
+.dropdown:hover .dropdown-content,
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+/* Search Input and Button */
 .search-bar input {
   padding: 8px;
   border: 3px solid black;
   border-radius: 4px;
   height: 30px;
-  width: 700px; /* Adjust width as needed */
+  width: 700px;
 }
 
 .search-bar button {
@@ -101,77 +184,10 @@
   background-color: #555;
 }
 
-/* Bottom Navbar: Navigation Links */
-.navbar {
-  display: flex;
-  position: relative;
-  top: 110px;
-  justify-content: center; /* Center the nav-links */
-  background-color: white;
-  padding: 10px 0; /* Adjust padding to 0 horizontally to keep it full width */
-}
-
-/* Navigation Links */
-.nav-links {
-  list-style: none;
-  display: flex;
-  margin-left: 60px;
-  padding: 0;
-}
-
-.nav-links li {
-  font-size: 20px;
- 
-  margin-right: 40px; /* Adjust spacing between list items */
-}
-
-.nav-links li a {
-  color: black;
-  text-decoration: none;
-  /* padding: 10px 15px; */
-  display: block;
-  transition: background 0.3s ease;
-}
-
-.nav-links li a:hover {
-  color: #7c7676;
-  
-}
-
-.nav-links li:last-child {
-  margin-right: 0; /* Remove margin from the last item */
-}
-
-/* Dropdown Menu */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 380px;
-  background-color: #444;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  min-width: 150px;
-  z-index: 1000;
-}
-
-.dropdown-content li a {
-  padding: 10px;
-  display: block;
-  color: white;
-}
-
-.dropdown:hover .dropdown-content,
-.dropdown:focus .dropdown-content,
-.dropdown:active .dropdown-content {
-  display: block; /* This should show the dropdown, but it's not necessary with React state */
-}
-
 .shopping-bag-icon {
   font-size: 24px;
   color: black;
-  margin-right: 20px !important;
+  position: relative;
   
 }
 /* ✅ Hide the bottom navbar on small mobile screens (phones) */
@@ -181,7 +197,9 @@
   }
 
   .top-navbar {
-    margin-top: -5px;
+    position: relative;
+    top:-25px;
+    left: 220px;
     flex-direction: column;
     align-items: center;
   }
@@ -197,6 +215,9 @@
   }
 
   .logo img {
+    position: relative;
+    left: -210px;
+    top: 20px;
     width: 200px;
     height: 160px;
   }
@@ -214,11 +235,16 @@
 /* ✅ Responsive adjustments for tablets (iPads) */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   .top-navbar {
- margin-top: 140px;
+ /* margin-top: 140px; */
+ position: relative;
+ left: 100px;
     flex-wrap: wrap;
   }
 
   .logo img {
+    top: 10px;
+    left: -73px;
+    position: relative;
     width: 160px;
     height: 150px;
   }
@@ -260,4 +286,5 @@
   .shopping-bag-icon {
     font-size: 22px;
   }
+
 }

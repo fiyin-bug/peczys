@@ -1,6 +1,5 @@
-
 .wrap{
-  margin-top: -190px;
+  margin-top: -400px;
 }
 
 .oil-grid {
@@ -28,7 +27,7 @@
   }
   .oils{
     font-size: 30px;
-    margin-left:530px;
+    /* margin-left:530px; */
   }
   
   .oil-card:hover {
@@ -45,13 +44,17 @@
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s ease; /* Smooth hover effect */
     width: 100%; /* Full width of the card */
-    margin-top: 15px; /* Space above the button */
+    margin-top: 22px; /* Space above the button */
   }
   /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+
+  .wrap{
+    margin-top: -300px;
+  }
   .oil-card {
     width: 80%; /* Adjust width for tablets */
-    height: 120px;
+    height: 400px;
     padding-bottom: 10px;
   }
 
@@ -69,15 +72,21 @@
 }
 
 @media screen and (max-width: 480px) {
+
+ 
   .oil-card {
     width: 260px; /* Full width for mobile */
-    height: 277px;
+    height: 477px;
     margin-left: 45px;
     padding-bottom: 10px;
   }
+  .perfume-image{
+    width: 100%;
+    height: 70%;
+  }
 
   .oil-add {
-    margin-top: -25px;
+    margin-top: 25px;
     font-size: 14px;
     padding: 12px;
   } 

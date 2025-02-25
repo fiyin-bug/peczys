@@ -6,7 +6,7 @@
   width: 100%;
   position: relative; /* Keeps it at the bottom naturally */
   bottom: 0;
-  top: 2620px;
+  top: 3120px;
   text-align: center;
 }
 
@@ -103,7 +103,7 @@
 /* Responsive Design */
 @media (max-width: 850px) {
   .footer{
-   top: 3030px;
+   top: 3730px;
    height: 345px;
    position: relative;
   }
@@ -136,7 +136,7 @@
   .footer {
     position: relative;
     height: 350px;
-    top: 2820px;
+    top: 3120px;
   }
 
   .footer-logo img {

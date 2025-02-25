@@ -1,9 +1,10 @@
 import React from 'react';
 import './OilCard.css';
 
+
 const OilCard = ({ id, name, gender, image, price }) => {
   const handleAddToCartClick = () => {
-    const phoneNumber = '+2348164504707'; // Replace with your WhatsApp business number
+    const phoneNumber = '+2347013084388'; // Replace with your WhatsApp business number
     const message = `I want to buy ${name}`; // Custom message with the product name
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   

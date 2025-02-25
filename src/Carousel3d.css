@@ -1,0 +1,142 @@
+/* src/components/Carousel3D.css */
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 120px 20px; */ /* Uncomment if needed */
+}
+
+/* Base Swiper styling */
+.swiper {
+  width: 100%;
+  height: 450px; /* Default height for large screens */
+}
+
+/* Base Slide styling */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px; /* Default width for large screens */
+  height: 430px; /* Default height for large screens */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Active slide effect */
+.swiper-slide-active {
+  transform: scale(1.1); /* Slightly enlarge active slide */
+}
+
+/* Pagination styling */
+.swiper-pagination {
+  bottom: 10px !important;
+}
+
+.swiper-pagination-bullet {
+  background: #333;
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  background: #007bff;
+  opacity: 1;
+}
+
+/* Navigation buttons styling */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #007bff;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 20px;
+}
+
+/* Responsive Adjustments */
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 840px) {
+  .swiper {
+    height: 350px; /* Reduced height for tablets */
+  }
+  .swiper-slide {
+    width: 250px; /* Smaller width for tablets */
+    height: 330px; /* Smaller height for tablets */
+  }
+  .swiper-slide-active {
+    transform: scale(1.05); /* Slightly reduced scale for active slide */
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 35px; /* Smaller buttons */
+    height: 35px;
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 18px; /* Slightly smaller arrows */
+  }
+}
+
+/* Mobile Phones (max-width: 480px) */
+@media (max-width: 500px) {
+  .swiper {
+    height: 350px; /* Further reduced height for mobile */
+  }
+  .swiper-slide {
+    width: 200px; /* Smaller width for mobile */
+    height: 350px; /* Smaller height for mobile */
+  }
+  .swiper-slide-active {
+    transform: scale(1.03); /* Minimal scale effect for mobile */
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 30px; /* Even smaller buttons */
+    height: 30px;
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 16px; /* Smaller arrows for mobile */
+  }
+  .swiper-pagination-bullet {
+    width: 6px; /* Smaller pagination dots */
+    height: 6px;
+  }
+}
+
+/* Very Small Screens (max-width: 360px) */
+@media (max-width: 480px) {
+  .swiper {
+    height: 200px; /* Minimum height for very small screens */
+  }
+  .swiper-slide {
+    width: 180px; /* Minimum width for very small screens */
+    height: 180px; /* Minimum height for very small screens */
+  }
+  .swiper-slide-active {
+    transform: scale(1.02); /* Barely noticeable scale effect */
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 25px; /* Tiny buttons */
+    height: 25px;
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 14px; /* Tiny arrows */
+  }
+}

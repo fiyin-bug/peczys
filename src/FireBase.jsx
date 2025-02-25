@@ -4,14 +4,14 @@ import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 // Your Firebase config (Get this from Firebase Console > Project Settings)
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyA7YKM28qsr0GKcs3mgGoa5_DLd16HNxos",
+  authDomain: "pecz-9e6bb.firebaseapp.com",
+  projectId: "pecz-9e6bb",
+  storageBucket: "pecz-9e6bb.firebasestorage.app",
+  messagingSenderId: "613104678652",
+  appId: "1:613104678652:web:9a3de7b19ab37d56c1c979",
+  measurementId: "G-TZHE618S5X"
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -27,4 +27,4 @@ export const subscribeToMailingList = async (email) => {
   }
 };
 
-export default db;
+export default Firebase;

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import PerfumeCard from './PerfumeCard';
 import masc from './assets/masc.jpg';
 import richh from './assets/richh.jpg';
@@ -26,7 +27,9 @@ const Perfumes = () => {
 
   return (
     <>
+      <div className="dew">
       <Navbar />
+      </div>
       <h4 className="sho">COLOGNES</h4>
       <div className="perfumes-container">
         {filteredPerfumes.length > 0 ? (
@@ -43,6 +46,7 @@ const Perfumes = () => {
         ) : (
           <p>No perfumes found.</p> // Show message if no results
         )}
+     
       </div>
     </>
   );
