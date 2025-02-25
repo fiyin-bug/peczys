@@ -101,7 +101,16 @@
   background-color: #c1275a;
 }
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
+  .footer{
+   top: 3030px;
+   height: 345px;
+   position: relative;
+  }
+
+
+
+
   .footer-content {
     flex-direction: column;
     text-align: center;
@@ -123,10 +132,11 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .footer {
-    height: 320px;
-  padding: 1px;
+    position: relative;
+    height: 350px;
+    top: 2820px;
   }
 
   .footer-logo img {

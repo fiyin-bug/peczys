@@ -8,7 +8,8 @@
 /* Top Navbar */
 .top-navbar {
   display: flex;
-  margin-top: 140px;
+ top: 140px;
+ position: relative;
   justify-content: space-between; /* Space between logo and search bar */
   align-items: center; /* Vertically center items */
   background-color: white;
@@ -45,31 +46,33 @@
 
 .categories-dropdown-content {
   position: absolute;
-  top: 100%;
+  top: 150%;
   left: 0;
   background-color: #101010;
   border: 1px solid #ddd;
   list-style: none;
   padding: 10px;
   margin: 0;
+  display: none;
   min-width: 150px;
   z-index: 1000;
 }
 .categories-dropdown-content li a {
- 
+  display: block;
   text-decoration: none!important;
   color: white;
   cursor: pointer;
 }
 
 .categories-dropdown-content li {
-
+  display: block;
   padding: 8px 0;
   cursor: pointer;
 }
 
 .categories-dropdown-content li a:hover {
   color: #8a7d7d;
+  display: block;
 }
 .span span{
   color: white;
@@ -101,6 +104,8 @@
 /* Bottom Navbar: Navigation Links */
 .navbar {
   display: flex;
+  position: relative;
+  top: 110px;
   justify-content: center; /* Center the nav-links */
   background-color: white;
   padding: 10px 0; /* Adjust padding to 0 horizontally to keep it full width */
@@ -116,7 +121,7 @@
 
 .nav-links li {
   font-size: 20px;
-  position: relative;
+ 
   margin-right: 40px; /* Adjust spacing between list items */
 }
 
@@ -142,7 +147,7 @@
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 380px;
   background-color: #444;
   list-style: none;
   padding: 0;
@@ -209,7 +214,7 @@
 /* ✅ Responsive adjustments for tablets (iPads) */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   .top-navbar {
- margin-top: -20px;
+ margin-top: 140px;
     flex-wrap: wrap;
   }
 

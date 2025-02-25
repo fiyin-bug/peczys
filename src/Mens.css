@@ -1,4 +1,4 @@
-/* App.css */
+
 
   
   .section-container {
@@ -9,7 +9,7 @@
     margin: 50px auto;
     margin-top: 170px;
     padding: 20px;
-  
+   
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     opacity: 0; /* Start hidden */
@@ -108,12 +108,12 @@
   
     .right-section img {
       max-width: 100%;
-      margin-left: -36px;
+      margin-left: -0px;
     }
   }
   
   /* ✅ Tablet Screens (iPads: 481px - 1024px) */
-  @media screen and (min-width: 481px) and (max-width: 1024px) {
+  @media screen and (min-width: 481px) and (max-width: 900px) {
     .section-container {
       flex-direction: column;
       text-align: center;

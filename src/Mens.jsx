@@ -30,7 +30,7 @@ const App = () => {
     <div className={`section-container ${isVisible ? "visible" : ""}`}>
       {/* Left Section */}
       <div className="left-section">
-      <button onClick={() => navigate("/perfumes")}>Black for Men</button>
+      <button onClick={() => navigate("/perfumes")}>MASC FOR MEN</button>
         <h3>Peczys Cologne</h3>
         <h2>MENS COLLECTION</h2>
         <p>
