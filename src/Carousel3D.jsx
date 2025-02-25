@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "./Carousel3D.css";
+import "./Carousel3d.css";
 import PerfumeCard from "./PerfumeCard";
 
 const Carousel3D = ({ perfumes }) => {
