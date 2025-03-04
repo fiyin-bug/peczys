@@ -9,7 +9,7 @@ import Navbar from './Navbar';
 import Mens from './Mens';
 import Womens from './Womens';
 import Carousel from './Carousel';
-import Carousel3D from './Carousel3D';
+// import Carousel3D from './Carousel3D';
 
 // Define perfumesData
 const perfumesData = [
