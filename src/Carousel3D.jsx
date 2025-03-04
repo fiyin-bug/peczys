@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
+import { useNavigate } from "react-router-dom";
 import Swiper from "swiper";
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -10,7 +10,7 @@ import "./Carousel3d.css";
 import PerfumeCard from "./PerfumeCard";
 
 const Carousel3D = ({ perfumes }) => {
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate();
 
   useEffect(() => {
     const swiper = new Swiper(".swiper", {
@@ -19,11 +19,11 @@ const Carousel3D = ({ perfumes }) => {
       centeredSlides: true,
       slidesPerView: "auto",
       coverflowEffect: {
-        rotate: 50,
+        rotate: 30,
         stretch: 0,
-        depth: 100,
+        depth: 150,
         modifier: 1,
-        slideShadows: true,
+        slideShadows: false,
       },
       pagination: {
         el: ".swiper-pagination",
@@ -47,35 +47,31 @@ const Carousel3D = ({ perfumes }) => {
   }, [perfumes]);
 
   return (
-    <div className="carousel-3d-container">
-      <div className="swiper">
-        <div className="swiper-wrapper">
-          {perfumes && perfumes.length > 0 ? (
-            perfumes.map((perfume) => (
-              <div
-                className="swiper-slide"
-                key={perfume.id}
-                onClick={() => navigate("/perfumes")} // Navigate to /perfumes on click
-                style={{ cursor: "pointer" }} // Add pointer cursor to indicate clickability
-              >
-                <PerfumeCard
-                  id={perfume.id}
-                  name={perfume.name}
-                  ml={perfume.ml}
-                  image={perfume.image}
-                  price={perfume.price}
-                />
+    <div className="carousel-container">
+      <h2 className="carousel-title">OUR SPECIALS</h2>
+      <div className="carousel-3d-container">
+        <div className="swiper">
+          <div className="swiper-wrapper">
+            {perfumes && perfumes.length > 0 ? (
+              perfumes.map((perfume) => (
+                <div
+                  className="swiper-slide"
+                  key={perfume.id}
+                  onClick={() => navigate("/perfumes")}
+                >
+                  <PerfumeCard {...perfume} />
+                </div>
+              ))
+            ) : (
+              <div className="swiper-slide">
+                <p>No perfumes available.</p>
               </div>
-            ))
-          ) : (
-            <div className="swiper-slide">
-              <p>No perfumes available.</p>
-            </div>
-          )}
+            )}
+          </div>
+          <div className="swiper-pagination"></div>
+          <div className="swiper-button-prev"></div>
+          <div className="swiper-button-next"></div>
         </div>
-        <div className="swiper-pagination"></div>
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next"></div>
       </div>
     </div>
   );

@@ -138,13 +138,17 @@ body {
   }
   
   @media (max-width: 600px) {
+    .section-container{
+     min-height: fit-content;
+    }
     .left-section img {
       max-width: 80%;
       margin-top: 38px;
       margin-left: -0px;
     }
     .left-section{
-      margin-top: -130px;
+      position: relative;
+      top: -30px;
     }
     .right-section{
       margin-top: 60px;
@@ -153,25 +157,25 @@ body {
     .right-section h2 {
       font-size: 32px;
       position: relative;
-      top: -100px;
+      top: -130px;
     }
   
     .right-section p {
       font-size: 19px;
       position: relative;
-      top: -40px;
+      top: -150px;
     }
 
     .right-section h3 {
       font-size: 22px;
       position: relative;
-      top: -80px;
+      top: -120px;
     }
   
     .right-section button {
       font-size: 14px;
       padding: 10px 16px;
       position: relative;
-      top: -60px;
+      top: -110px;
     }
   }

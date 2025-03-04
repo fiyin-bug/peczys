@@ -27,8 +27,8 @@ const LandingPage = () => {
       <Carousel />
       <Mens />
       <Womens />
-      <Carousel3D perfumes={perfumesData} /> {/* Pass perfumesData as a prop */}
-      <br /><br /><br /><br />
+
+     
     </>
   );
 };
